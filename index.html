@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Обязательные метатеги -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Браво</title>
+  </head>
+  <body>
+    <div class="wrapper">
+        <!-- header start -->
+        <header class="header">
+            <div class="logo"><img src="/img/logo.svg" alt="БРАВО"></div>
+            <nav class="header__links">
+                <ul class="links__list">
+                    <li class="link__item"><a href="#about">О нас</a></li>
+                    <li class="link__item"><a href="#projects">Проекты</a></li>
+                    <li class="link__item"><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- header end -->
+
+        <!-- section top-slider start -->
+        <section class="top-slider">
+            <div class="container">
+                <div class="top-slider-container">
+                    <div class="video-slider">
+                        <div class="video-slide active">
+                            <video class="movie-video" controls autoplay muted id="video_slider">
+                                <source src="/videos/mujskie_kanikuli.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">Мужские каникулы</h3>
+                                <p id="video-genre">Жанр: Роуд муви</p>
+                                <p id="video-roles">В главных ролях А.Кравченко, К.Кяро, А. Шаляпин</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="vertical-line">
+                        <img src="/img/vertical-line.svg" alt="">
+                    </div> -->
+                    <div class="projects-collection" id="projects-collection">
+                        <div class="collection-item left-item">
+                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Человек, который знал все" data-genre="Жанр: Драма" data-roles="В главных ролях: Егор Бероев, Максим Суханов, Екатерина Гусева, Андрей Ташков, Егор Пазенко и др." data-videoUrl="/videos/chelovek.mp4">Человек, который знал все (2009)</h3>
+                        </div>
+                        <div class="collection-item right-item">
+                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Провокатор" data-genre="Жанр: Приключенческий детектив" data-roles="В главных ролях: В.Хаев, Е.Сангаджиев, И.Волков, А.Шевченко и др." data-videoUrl="/videos/provokator.mp4">Провокатор (2011)</h3>
+                        </div>
+                        <div class="collection-item left-item">
+                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Золотой запас" data-genre="Жанр: Остросюжетный боевик" data-roles="В главных ролях: М. Мамаев, Л. Мэй, И. Волков, И. Савочкин и др." data-videoUrl="/videos/zolotoj_zapas.mp4">Золотой запас (2012)</h3>
+                        </div>
+                        <div class="collection-item right-item">
+                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Я-Ангина" data-genre="Жанр: Детектив, лирическая комедия" data-roles="В главных ролях: К. Бабушкина, Л. Полякова, М. Васьков, А. Гущин и др." data-videoUrl="/videos/angina.mp4">Я-Ангина (2013)</h3>
+                        </div>
+                        <div class="collection-item left-item">
+                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Холодное блюдо" data-genre="Жанр: Психологическая драма" data-roles="В главных ролях: И. Шакунов, Т. Черкасова, В. Веревочкин, А. Майорова, А. Наумов, И. Андреевайте и др." data-videoUrl="/videos/holodnoe.mp4">Холодное блюдо (2014)</h3>
+                        </div>
+                        <div class="collection-item right-item">
+                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Пляж" data-genre="Жанр: Детектив с элементами комедии" data-roles="В главных ролях: Г. Дронов, П. Делонг, О. Березкина, Д. Агишева и др." data-videoUrl="/videos/plyazh.mp4">Пляж (2014)</h3>
+                        </div>
+                        <div class="collection-item left-item">
+                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Мужские каникулы" data-genre="Жанр: Роуд Муви" data-roles="В главных ролях: А. Кравченко, К. Кяро, А. Шаляпин" data-videoUrl="/videos/mujskie_kanikuli.mp4">Мужские каникулы (2014)</h3>
+                        </div>
+                        <div class="collection-item right-item">
+                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Бык и Шпиндель" data-genre="Жанр: Детектив" data-roles="В главных ролях: И. Лифанов, В. Зайцев и др." data-videoUrl="/videos/bik.mp4">Бык и Шпиндель (2015)</h3>
+                        </div>
+                        <div class="collection-item left-item">
+                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Отдел" data-genre="Жанр: Остросюжетный боевик" data-roles="В главных ролях Е.Сидихин, А.Бухаров, А.Гущин, В.Демчог, А.Заворотнюк, А.Хилькевич" data-videoUrl='none' data-poster="/videos/otdel.webp">Отдел (2016)</h3>
+                        </div>
+                        <div class="collection-item right-item">
+                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Бобры" data-genre="Жанр: Мелодрама" data-roles="В главных ролях: К. Соловьев, Е. Вуличенко, Ф. Лавров, В. Ветров, Д. Беспалый и др." data-videoUrl="/videos/bobri.mp4">Бобры (2018)</h3>
+                        </div>
+                        <div class="collection-item left-item">
+                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Пляж. Жаркий сезон" data-genre="Жанр: Детектив с элементами комедии" data-roles="В главных ролях: Г. Дронов, П. Делонг, О. Березкина и др." data-videoUrl="/videos/plyazh_jarkij.mp4">Пляж. Жаркий сезон (2018)</h3>
+                        </div>
+                        <div class="collection-item right-item">
+                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Золото Лагина" data-genre="Жанр: Детектив, драма, триллер" data-roles="В главных ролях: А. Балуев , М. Порошина , А. Шевченко , Т. Бадалбейли, Д. Куличков, В. Верёвочкин, И. Акрачков, А.Кирсанов и др." data-videoUrl="/videos/zoloto_lagina.mp4">Золото Лагина (2019)</h3>
+                        </div>
+                        <div class="collection-item left-item">
+                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Хозяин" data-genre="Жанр: Драма, триллер" data-roles="В главных ролях:  Д. Никифоров, Е. Дрозд, И. Таранник, Н. Козак, С. Шарифуллин, П. Баранчеев, Д. Лавров, М. Овакимян, А. Богданов, Д. Юргенс и др." data-videoUrl="/videos/hozyain.mp4">Хозяин (2020)</h3>
+                        </div>
+                        <div class="collection-item right-item">
+                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Чужая стая" data-genre="Жанр: Драма, боевик" data-roles="В главных ролях:  Д. Ульянов, М. Абуладзе, Т. Казючиц, Е. Олькина, А. Шевченков, Ю. Скулябин, Е. Невар, И. Ходимчук, Д. Блохин, С. Векслер и др." data-videoUrl="/videos/chuzhaya_staya.mp4">Чужая стая (2020)</h3>
+                        </div>
+                        <div class="collection-item left-item">
+                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Криминальный доктор" data-genre="Жанр: Боевик, драма, триллер" data-roles="В главных ролях: К. Сафонов, А. Снаткина, И. Жижикин, М. Горевой, Т. Колганова, А. Каштанова и др." data-videoUrl="/videos/kriminalnij_doctor.mp4">Криминальный доктор (2021)</h3>
+                        </div>
+                        <div class="collection-item right-item">
+                            <h3 onclick="videoUrl(this)" id="dataset" data-header="БиМ" data-genre="Жанр: Преступление, комедия, детектив" data-roles="В главных ролях: Д. Никифоров, А. Армер, А. Багиров, Н. Славецкая, А. Харыбин, М. Богдасаров и др." data-videoUrl="/videos/bim.mp4">БиМ (2021)</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section top-slider end -->
+
+        <!-- section about start -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-row">
+                    <div class="about__title">
+                        <h2 class="title">О нас</h2>
+                    </div>
+                    <div class="about__text">
+                        <div class="about__text-first">
+                            <p>
+                                Продюсерский центр «Браво» образован в 2006 году. Основное направление деятельности - производство художественных 
+                                фильмов и телесериалов. Основатель и Генеральный директор Мурат Межиев.
+                            </p>
+                        </div>
+                        <div class="about__text-second">
+                            <p>
+                                За это время компания приобрела большой опыт и сейчас в состоянии обеспечить процесс съёмок кино или телефильма, клипа или рекламного ролика 
+                                <span class="about__text-third">
+                           
+                                        – на всех стадиях производства от написания сценария, подбора актёров и выбора натуры, финансового планирования и контроля, до монтажно-тонировочных работ и сдачи материала заказчику.
+                    
+                                </span>
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section about end-->
+
+        <!-- section projects start -->
+        <section class="projects" id="projects">
+            <div class="container">
+                <div class="projects-row">
+                    <div class="projects__title">
+                        <h3>Что мы делаем?</h3>
+                        <h2 class="title">Проекты</h2>
+                    </div>
+                    <a href="/projects__button" class="projects__button">
+                        <p class="button-text">
+                            Все проекты
+                        </p>
+                    </a>
+                </div>
+                <div class="projects__slider">
+                    <div class="slider-inner">
+                        <div class="projects__slide active">
+                            <p class="slide__status">
+                                (В производстве)
+                            </p>
+                            <div class="slide__title">
+                                <h2>
+                                    БиМ-продолжение
+                                </h2>
+                            </div>
+                            <div class="slide__description">
+                                <p>
+                                    Жанр: Преступление, комедия, детектив
+                                </p>
+                            </div>
+                            <div class="project__detailed"> 
+                                <img src="/img/projects/slider/bim.svg" alt="image" class="image" />
+                                <div class="overlay">
+                                    <p>
+                                        В полицейском участке приморского портового города ходят слухи, что капитана Макара Климова сослали к ним из Москвы из-за романа с женой большого начальника с Петровки. Правда это или нет — никто не знает. На юге Макару нравится: свежий воздух, красивые женщины, нет столичной суеты. А дом, в который его поселили, находится прямо на берегу моря. Первое впечатление от тихой провинциальной жизни у Климова быстро проходит: контрабанда, наркотики, торговля людьми — целый криминальный набор, бороться с которым в этом городке приходится практически в одиночку.
+                                    </p>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="projects__slide">
+                            <p class="slide__status">
+                                (Завершен)
+                            </p>
+                            <div class="slide__title">
+                                <h2>
+                                    Человек, который знал все
+                                </h2>
+                            </div>
+                            <div class="slide__description">
+                                <p>
+                                    Жанр: Драма
+                                </p>
+                            </div>
+                            <div class="project__detailed top-33px"> 
+                                <img src="/img/projects/slider/chelovek.svg" alt="image" class="image" />
+                                <div class="overlay">
+                                    <p>
+                                        Главный герой романа, интеллигентный историк Александр Безукладников  в результате отчаянной попытки самоубийства неожиданно обретает феноменальную способность - мгновенно получать ответ на любой вопрос. Скромный и безобидный, он становится лакомой дичью для всех - женщин, криминальных авторитетов и даже международных спецслужб. Одни пытаются его использовать, другие - уничтожить. Но «маленький человек» продолжает жить по законам своей собственной совести…
+                                    </p>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="projects__slide">
+                            <p class="slide__status">
+                                (Завершен)
+                            </p>
+                            <div class="slide__title">
+                                <h2>
+                                    Золотой запас
+                                </h2>
+                            </div>
+                            <div class="slide__description">
+                                <p>
+                                    Жанр: Остросюжетный боевик
+                                </p>
+                            </div>
+                            <div class="project__detailed"> 
+                                <img src="/img/projects/slider/zolotoj.svg" alt="image" class="image" />
+                                <div class="overlay">
+                                    <p>
+                                        В новом сезоне главные герои – Петр Гриневский и Алексей Карташ сталкиваются с умным и хитрым врагом из их прошлого, который долгое время вынашивал план мести  и, наконец, получил возможность осуществить их. Гриневского и Карташа обвиняют в  том, что несколько лет назад они утаили от государства часть найденной платины. Более того, именно их пытаются представить хозяевами нового тайного платинового прииска...
+                                    </p>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="projects__slide">
+                            <p class="slide__status">
+                                (Завершен)
+                            </p>
+                            <div class="slide__title">
+                                <h2>
+                                    Я-Ангина!
+                                </h2>
+                            </div>
+                            <div class="slide__description">
+                                <p>
+                                    Жанр: Детектив, лирическая комедия
+                                </p>
+                            </div>
+                            <div class="project__detailed"> 
+                                <img src="/img/projects/slider/angina.svg" alt="image" class="image" />
+                                <div class="overlay">
+                                    <p>
+                                        Маруся, по прозвищу «Ангина», была девушка добрая и духом, и телом. Молодуха, чуть за тридцать, крепкая, с «широкой костью». Если за что-то бралась – делала с жаром, не раздумывая. Трудилась мотальщицей, имела квартиру и мужа, гражданского, но мужа – Ваську. Васька был неказист, нескладен, не сильно удачлив, но Маруся его любила – пусть «плохонький» но её. В поисках заработка Васька рванул в областной центр..
+                                    </p>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="projects__slide">
+                            <p class="slide__status">
+                                (Завершен)
+                            </p>
+                            <div class="slide__title">
+                                <h2>
+                                    Холодное блюдо
+                                </h2>
+                            </div>
+                            <div class="slide__description">
+                                <p>
+                                    Жанр: Психологическая драма
+                                </p>
+                            </div>
+                            <div class="project__detailed"> 
+                                <img src="/img/projects/slider/holodnoe.svg" alt="image" class="image" />
+                                <div class="overlay">
+                                    <p>
+                                        Чета Завьяловых, Александр и Лена становятся невольно втянутыми в криминальную историю с похищением дочери губернатора. Благодаря навыками и умениям приобретенным «в прошлой жизни» Завьялову удается не только спастись, но и спасти девочку. Но медийная популярность работает против Александра и его находят «тени прошлого» - соратники по прошлой жизни. Спасая себя и своих близких герой проходит сложный путь становления внутри семейных отношений...
+                                    </p>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="projects__slide">
+                            <p class="slide__status">
+                                (Завершен)
+                            </p>
+                            <div class="slide__title">
+                                <h2>
+                                    Пляж
+                                </h2>
+                            </div>
+                            <div class="slide__description">
+                                <p>
+                                    Жанр: Детектив с элементами комедии
+                                </p>
+                            </div>
+                            <div class="project__detailed"> 
+                                <img src="/img/projects/slider/plyazh.svg" alt="image" class="image" />
+                                <div class="overlay">
+                                    <p>
+                                        Сергей Парамонов уже десять лет является начальником пляжа небольшого курортного городка Азовска на Черноморском побережье. Пляж – место хлебное, но шумное и беспокойное. Десять лет назад Парамонов служил опером здесь же, в родном курортном городке Азовске, в районном отделе милиции, расположенном буквально через дорогу от администрации пляжа, его нынешней резиденцией.
+                                    </p>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="projects__slide">
+                            <p class="slide__status">
+                                (Завершен)
+                            </p>
+                            <div class="slide__title">
+                                <h2>
+                                    Мужские каникулы
+                                </h2>
+                            </div>
+                            <div class="slide__description">
+                                <p>
+                                    Жанр: Роуд муви
+                                </p>
+                            </div>
+                            <div class="project__detailed"> 
+                                <img src="/img/projects/slider/mujskie.svg" alt="image" class="image" />
+                                <div class="overlay">
+                                    <p>
+                                        История о том, как трое успешных и богатых бизнесменов лет около сорока, которые пресытились «цивильным» отдыхом,  решают провести отпуск в экстремальных условиях.
+                                        По прибытии на место (Северный Урал) их снабжают охотничьим оружием и всем необходимым снаряжением, чтобы выживать в тайге за сотни километров от ближайшего жилья, куда их забрасывают вертолётом. В ассортименте – охота, рыбная ловля и промывка золота старательским способом. Из продуктов только соль, сахар, чай и сухари (галеты), всё остальное для своего стола «отдыхающие» должны добыть и приготовить сами...
+                                    </p>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-control">
+                        <button class="slider-control-prev">
+                            <img src="/img/projects/slider/prev.svg" alt="Prev">
+                        </button>
+                        <button class="slider-control-next">
+                            <img src="/img/projects/slider/next.svg" alt="Next">
+                        </button>
+                    </div>
+                    <div class="projects-slider-min">
+                        <div class="projects-slider-min__item">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section projects end -->
+
+        <!-- section more-info start -->
+        <section class="more-info">
+            <div class="container">
+                <div class="channels">
+                    <div class="channels__top-img">
+                        <img src="/img/channels-line.svg" alt="">
+                    </div>
+                    <div class="channels__title">
+                        <h2 class="title">Нам доверяют</h2>
+                    </div>
+                    <div class="channels__items">
+                        <div class="channels__item">
+                            <img src="/img/1hd.svg" alt="Первый HD">
+                        </div>
+                        <div class="channels__item">
+                            <img src="/img/ren.svg" alt="РЕН ТВ">
+                        </div>
+                        <div class="channels__item">
+                            <img src="/img/ntv.svg" alt="НТВ">
+                        </div>
+                        <div class="channels__item">
+                            <img src="/img/leanm.svg" alt="Леан-М">
+                        </div>
+                    </div>
+                    <div class="channels__bot-img">
+                        <img src="/img/channels-line.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="why-us">
+                    <div class="why-us__title">
+                        <h2 class="title">Почему мы?</h2>
+                    </div>
+                    <div class="why-us__items">
+                        <div class="why-us__item">
+                            <div class="why-us__item-img">
+                                <img src="/img/info/camera.svg" alt="">
+                            </div>
+                            <div class="why-us__item-number">
+                                <span>01</span>
+                            </div>
+                            <div class="why-us__item-text">
+                                <p>
+                                    Доступ к 
+                                    высококачественному
+                                    оборудованию
+                                </p>
+                            </div>
+                        </div>
+                        <div class="why-us__item">
+                            <div class="why-us__item-img">
+                                <img src="/img/info/consult.svg" alt="">
+                            </div>
+                            <div class="why-us__item-number">
+                                <span>02</span>
+                            </div>
+                            <div class="why-us__item-text">
+                                <p>
+                                    Ценные консультации
+                                </p>
+                            </div>
+                        </div>
+                        <div class="why-us__item">
+                            <div class="why-us__item-img">
+                                <img src="/img/info/ticket.svg" alt="">
+                            </div>
+                            <div class="why-us__item-number">
+                                <span>03</span>
+                            </div>
+                            <div class="why-us__item-text">
+                                <p>
+                                    Профессиональные видеографы
+                                </p>
+                            </div>
+                        </div>
+                        <div class="why-us__item">
+                            <div class="why-us__item-img">
+                                <img src="/img/info/lenta.svg" alt="">
+                            </div>
+                            <div class="why-us__item-number">
+                                <span>04</span>
+                            </div>
+                            <div class="why-us__item-text">
+                                <p>
+                                    Отличная работа с видеоматериалом
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section more-info end -->
+
+        
+    </div>
+    <!-- section bottom-slider start -->
+    <section class="bottom-slider">
+        <div class="slider-container">
+            <div class="slider">
+              <div class="slide">
+                <div class="slide-bland-square"></div>
+                <img src="/img/bottom-slider/1.svg" alt="Slide 1">
+              </div>
+              <div class="slide">
+                <div class="slide-bland-square"></div>
+                <img src="/img/bottom-slider/2.svg" alt="Slide 2">
+              </div>
+              <div class="slide">
+                <div class="slide-bland-square"></div>
+                <img src="/img/bottom-slider/3.svg" alt="Slide 3">
+              </div>
+              <div class="slide">
+                <div class="slide-bland-square"></div>
+                <img src="/img/bottom-slider/4.svg" alt="Slide 3">
+              </div>
+              <div class="slide">
+                <div class="slide-bland-square"></div>
+                <img src="/img/bottom-slider/5.svg" alt="Slide 3">
+              </div>
+              <div class="slide">
+                <div class="slide-bland-square"></div>
+                <img src="/img/bottom-slider/6.svg" alt="Slide 3">
+              </div>
+              <div class="slide">
+                <div class="slide-bland-square"></div>
+                <img src="/img/bottom-slider/7.svg" alt="Slide 3">
+              </div>
+              <div class="slide">
+                <div class="slide-bland-square"></div>
+                <img src="/img/bottom-slider/8.svg" alt="Slide 3">
+              </div>
+              <div class="slide">
+                <div class="slide-bland-square"></div>
+                <img src="/img/bottom-slider/9.svg" alt="Slide 3">
+              </div>
+              <div class="slide">
+                <div class="slide-bland-square"></div>
+                <img src="/img/bottom-slider/10.svg" alt="Slide 3">
+              </div>
+              <div class="slide">
+                <div class="slide-bland-square"></div>
+                <img src="/img/bottom-slider/11.svg" alt="Slide 3">
+              </div>
+              <div class="slide">
+                <div class="slide-bland-square"></div>
+                <img src="/img/bottom-slider/12.svg" alt="Slide 3">
+              </div>
+              <div class="slide">
+                <div class="slide-bland-square"></div>
+                <img src="/img/bottom-slider/13.svg" alt="Slide 3">
+              </div>
+              <div class="slide">
+                <div class="slide-bland-square"></div>
+                <img src="/img/bottom-slider/14.svg" alt="Slide 3">
+              </div>
+              <div class="slide">
+                <div class="slide-bland-square"></div>
+                <img src="/img/bottom-slider/15.svg" alt="Slide 3">
+              </div>
+              <div class="slide">
+                <div class="slide-bland-square"></div>
+                <img src="/img/bottom-slider/16.svg" alt="Slide 3">
+              </div>
+              <div class="slide">
+                <div class="slide-bland-square"></div>
+                <img src="/img/bottom-slider/17.svg" alt="Slide 3">
+              </div>
+              <div class="slide">
+                <div class="slide-bland-square"></div>
+                <img src="/img/bottom-slider/18.svg" alt="Slide 3">
+              </div>
+              <div class="slide">
+                <div class="slide-bland-square"></div>
+                <img src="/img/bottom-slider/19.svg" alt="Slide 3">
+              </div>
+            </div>
+          </div>
+    </section>
+    <!-- section bottom-slider start -->
+    
+    <!-- footer start -->
+    <footer class="contacts" id="contacts">
+        <div class="wrapper">
+            <div class="container">
+                <div class="contacts__title">
+                    <h2 class="title">
+                        Контакты
+                    </h2>
+                </div>
+                <div class="contacts__phone">
+                    <div class="phone-icon">
+                        <img class="small-rotate" src="/img/contacts/phone.svg" alt="Телефон">
+                    </div>
+                    <div class="phone-number">
+                        <a href="tel:+74951815537">+7 (495) 181-55-37</a>
+                    </div>
+                </div>
+                <div class="contacts__email">
+                    <div class="email-icon">
+                        <img class="small-rotate" src="/img/contacts/email.svg" alt="E-mail">
+                    </div>
+                    <div class="email-number">
+                        <a href="mailto:info@bravokino.ru">info@bravokino.ru</a>
+                    </div>
+                </div>
+                <div class="contacts__address">
+                    <p>
+                        Москва, ул.Мосфильмовская, дом 1с20, офис 314
+                    </p>
+                </div>
+                <div class="footer-bottom">
+                    <div class="logo"><img src="/img/logo-black.svg" alt="БРАВО"></div>
+                        <ul class="footer-documents">
+                            <li class="footer-document"><a href="/">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a></li>
+                            <li class="footer-document"><a href="#contacts">КОНТАКТЫ</a></li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/js/video-slider.js"></script>
+    <script type="text/javascript" src="/js/projects-slider.js"></script>
+    <script>
+        const swiper = document.getElementById('projects-collection');
+        const slides = swiper.querySelectorAll('.collection-item');
+        let startY = 0;
+        let lastTranslateY = 0;
+
+        swiper.addEventListener('touchstart', (event) => {
+            startY = event.touches[0].clientY;
+            // Отключаем анимацию при начале свайпа
+            slides.forEach((slide) => {
+            slide.style.transition = 'none';
+            });
+        });
+
+        swiper.addEventListener('touchmove', (event) => {
+        const deltaY = event.touches[0].clientY - startY;
+        // Ограничиваем свайп от 0 до -480px
+        const limitedDeltaY = Math.min(Math.max(deltaY + lastTranslateY, -360), 0);
+        const transformValue = `translateY(${limitedDeltaY}px)`;
+
+        slides.forEach((slide) => {
+        slide.style.transform = transformValue;
+        });
+
+        event.preventDefault(); // Предотвращаем прокрутку страницы
+    });
+
+    swiper.addEventListener('touchend', () => {
+        slides.forEach((slide) => {
+        const transform = window.getComputedStyle(slide).getPropertyValue('transform');
+        const translateY = parseInt(transform.split(',')[5]) || 0;
+
+        lastTranslateY = translateY;
+
+        // Включаем анимацию при завершении свайпа
+        slide.style.transition = 'transform 0.3s ease-in-out';
+        slide.style.transform = `translateY(${Math.round(translateY / 14) * 14}px)`;
+        });
+    });
+    </script>
+  </body>
+</html>

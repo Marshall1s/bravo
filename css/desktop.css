@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: local("Noto Sans"), url('/fonts/NotoSans_Condensed-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Gogh";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: local("Gogh"), url('/fonts/Gogh-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "Gogh";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local("Gogh"), url('/fonts/Gogh-Medium.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "Gogh";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local("Gogh"), url('/fonts/Gogh-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: local("Gilroy"), url('/fonts/Gilroy-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local("Gilroy"), url('/fonts/Gilroy-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local("Gilroy"), url('/fonts/Gilroy-Bold.woff') format('woff');
+}
+
+
+body {
+    /* background: #202020; */
+    background: url(/img/Фон.png) center no-repeat;
+    background-size: cover;
+    background-color: #202020;
+}
