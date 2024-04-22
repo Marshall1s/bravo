@@ -765,6 +765,7 @@
     }
     #about {
         margin-top: 150px;
+        height: 810px;
     }
     .about__title {
         background: url(/img/about-desk.svg) no-repeat;
@@ -797,5 +798,43 @@
 
     .about__text-first {
         margin-bottom: 25px;
+    }
+
+     /* projects slider */
+     .projects-row {
+        margin-top: 40px;
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .projects__title h3 {
+        color: rgb(221, 15, 15);
+        font-family: Gilroy;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: -2%;
+        text-align: left;
+    }
+    .projects__button {
+        display: flex;
+        align-self: flex-end;
+        margin-bottom: 1vw;
+        width: 108px;
+        height: 23px;
+        box-sizing: border-box;
+        border: 0.64px solid rgb(231, 227, 216);
+        border-radius: 6.35px;
+    }
+    .projects__button p {
+        margin: auto;
+        color: rgb(231, 227, 216);
+        font-family: Gogh;
+        font-size: 8.89px;
+        font-weight: 700;
+        line-height: 12px;
+        letter-spacing: 0%;
+        text-align: center;
     }
 }
