@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="dist/css/timeline.min.css" />
     <title>Браво</title>
   </head>
   <body>
@@ -92,6 +93,25 @@
                             <h3 onclick="videoUrl(this)" id="dataset" data-header="БиМ" data-genre="Жанр: Преступление, комедия, детектив" data-roles="В главных ролях: Д. Никифоров, А. Армер, А. Багиров, Н. Славецкая, А. Харыбин, М. Богдасаров и др." data-videoUrl="/videos/bim.mp4">БиМ (2021)</h3>
                         </div>
                     </div>
+                    <div class="timeline-container timeline-theme-1">
+                        <div class="timeline js-timeline">
+                          <div data-time="2017">
+                            your content or markup
+                          </div>
+                          <div data-time="2016">
+                            your content or markup
+                          </div>
+                          <div data-time="2015">
+                            your content or markup
+                          </div>
+                          <div data-time="2014">
+                            your content or markup
+                          </div>
+                          <div data-time="2013">
+                            your content or markup
+                          </div>
+                        </div>
+                      </div>
                 </div>
             </div>
         </section>
@@ -549,11 +569,13 @@
     </footer>
     <!-- footer end -->
 
-
+    
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="dist/js/timeline.min.js"></script>
     <script type="text/javascript" src="/js/video-slider.js"></script>
     <script type="text/javascript" src="/js/projects-slider.js"></script>
     <script>
+        $('.js-timeline').Timeline();
         const swiper = document.getElementById('projects-collection');
         const slides = swiper.querySelectorAll('.collection-item');
         let startY = 0;

@@ -838,3 +838,7 @@
         text-align: center;
     }
 }
+
+.timeline-container {
+    display: none;
+}
