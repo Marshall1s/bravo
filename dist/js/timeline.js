@@ -204,7 +204,7 @@
 				totalHeight = currentItem.outerWidth() * (self.get_count());
 				currentWrapper.width(totalHeight);
 			}
-
+			console.log(itemSize)
 			var getTranslate = -(itemSize * self.get_current());
 
 			if (type === 'vertical'){
@@ -250,7 +250,8 @@
 
 			var getTranslate = -(itemSize * self.get_current()) - (-listSize / 2);
 			var totalSize = itemSize * (self.get_count());
-
+			alert(getTranslate);
+			console.log(getTranslate);
 
 			if (type === 'vertical'){
 				dotsWrapper.height(totalSize);

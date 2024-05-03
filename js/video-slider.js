@@ -1,38 +1,37 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const slides = document.querySelectorAll(".video-slide");
-    const nextButton = document.getElementById("next-video-slide");
-    let currentSlide = 0;
+// document.addEventListener("DOMContentLoaded", function() {
+//     const slides = document.querySelectorAll(".video-slide");
+//     const nextButton = document.getElementById("next-video-slide");
+//     let currentSlide = 0;
 
     
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            if (i === index) {
-                slide.classList.add("active");
-            } else {
-                slide.classList.remove("active");
-            }
-        });
-    }
+//     function showSlide(index) {
+//         slides.forEach((slide, i) => {
+//             if (i === index) {
+//                 slide.classList.add("active");
+//             } else {
+//                 slide.classList.remove("active");
+//             }
+//         });
+//     }
 
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-        const video = slides[currentSlide].querySelector("video");
-        video.play();
-        console.log(video.duration)
-    }
+//     function nextSlide() {
+//         currentSlide = (currentSlide + 1) % slides.length;
+//         showSlide(currentSlide);
+//         const video = slides[currentSlide].querySelector("video");
+//         video.play();
+//         console.log(video.duration)
+//     }
 
-    nextButton.addEventListener("click", nextSlide);
+//     nextButton.addEventListener("click", nextSlide);
 
-    showSlide(currentSlide);
-    const video = slides[currentSlide].querySelector("video");
-    video.play();
+//     showSlide(currentSlide);
+//     const video = slides[currentSlide].querySelector("video");
+//     video.play();
 
 
     
     
-});
-
+// });
 function videoUrl(slide) {
     // document.getElementById("video_slider").src = slider;
     const videoSlide = document.getElementById("video_slider");
@@ -60,16 +59,21 @@ function videoUrl(slide) {
 }
 
 let vid = document.getElementById("video_slider");
+console.log(vid)
 vid.onended = function() {
     var videoHeader = vid.nextElementSibling.getElementsByTagName("h3")[0].innerText
-    Array.from(document.getElementsByClassName("collection-item")).forEach(
+    console.log(videoHeader)
+    Array.from(document.getElementsByClassName("swiper-top")).forEach(
         function(div, index, array) {
             data = div.getElementsByTagName("h3");
+            console.log(data)
             if (videoHeader == data.dataset.dataset.header) {
                 if (index != (array.length - 1)) {
                     videoUrl(div.nextElementSibling.getElementsByTagName("h3")[0])
+                    swiper.slideNext();
                 } else {
                     videoUrl(array[0].getElementsByTagName("h3")[0])
+                    swiper.activeIndex = 0;
                 }
             }
         }

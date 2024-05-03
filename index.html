@@ -4,8 +4,11 @@
     <!-- Обязательные метатеги -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="dist/css/timeline.min.css" />
     <title>Браво</title>
   </head>
   <body>
@@ -40,78 +43,65 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="vertical-line">
-                        <img src="/img/vertical-line.svg" alt="">
-                    </div> -->
-                    <div class="projects-collection" id="projects-collection">
-                        <div class="collection-item left-item">
-                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Человек, который знал все" data-genre="Жанр: Драма" data-roles="В главных ролях: Егор Бероев, Максим Суханов, Екатерина Гусева, Андрей Ташков, Егор Пазенко и др." data-videoUrl="/videos/chelovek.mp4">Человек, который знал все (2009)</h3>
-                        </div>
-                        <div class="collection-item right-item">
-                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Провокатор" data-genre="Жанр: Приключенческий детектив" data-roles="В главных ролях: В.Хаев, Е.Сангаджиев, И.Волков, А.Шевченко и др." data-videoUrl="/videos/provokator.mp4">Провокатор (2011)</h3>
-                        </div>
-                        <div class="collection-item left-item">
-                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Золотой запас" data-genre="Жанр: Остросюжетный боевик" data-roles="В главных ролях: М. Мамаев, Л. Мэй, И. Волков, И. Савочкин и др." data-videoUrl="/videos/zolotoj_zapas.mp4">Золотой запас (2012)</h3>
-                        </div>
-                        <div class="collection-item right-item">
-                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Я-Ангина" data-genre="Жанр: Детектив, лирическая комедия" data-roles="В главных ролях: К. Бабушкина, Л. Полякова, М. Васьков, А. Гущин и др." data-videoUrl="/videos/angina.mp4">Я-Ангина (2013)</h3>
-                        </div>
-                        <div class="collection-item left-item">
-                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Холодное блюдо" data-genre="Жанр: Психологическая драма" data-roles="В главных ролях: И. Шакунов, Т. Черкасова, В. Веревочкин, А. Майорова, А. Наумов, И. Андреевайте и др." data-videoUrl="/videos/holodnoe.mp4">Холодное блюдо (2014)</h3>
-                        </div>
-                        <div class="collection-item right-item">
-                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Пляж" data-genre="Жанр: Детектив с элементами комедии" data-roles="В главных ролях: Г. Дронов, П. Делонг, О. Березкина, Д. Агишева и др." data-videoUrl="/videos/plyazh.mp4">Пляж (2014)</h3>
-                        </div>
-                        <div class="collection-item left-item">
-                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Мужские каникулы" data-genre="Жанр: Роуд Муви" data-roles="В главных ролях: А. Кравченко, К. Кяро, А. Шаляпин" data-videoUrl="/videos/mujskie_kanikuli.mp4">Мужские каникулы (2014)</h3>
-                        </div>
-                        <div class="collection-item right-item">
-                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Бык и Шпиндель" data-genre="Жанр: Детектив" data-roles="В главных ролях: И. Лифанов, В. Зайцев и др." data-videoUrl="/videos/bik.mp4">Бык и Шпиндель (2015)</h3>
-                        </div>
-                        <div class="collection-item left-item">
-                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Отдел" data-genre="Жанр: Остросюжетный боевик" data-roles="В главных ролях Е.Сидихин, А.Бухаров, А.Гущин, В.Демчог, А.Заворотнюк, А.Хилькевич" data-videoUrl='none' data-poster="/videos/otdel.webp">Отдел (2016)</h3>
-                        </div>
-                        <div class="collection-item right-item">
-                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Бобры" data-genre="Жанр: Мелодрама" data-roles="В главных ролях: К. Соловьев, Е. Вуличенко, Ф. Лавров, В. Ветров, Д. Беспалый и др." data-videoUrl="/videos/bobri.mp4">Бобры (2018)</h3>
-                        </div>
-                        <div class="collection-item left-item">
-                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Пляж. Жаркий сезон" data-genre="Жанр: Детектив с элементами комедии" data-roles="В главных ролях: Г. Дронов, П. Делонг, О. Березкина и др." data-videoUrl="/videos/plyazh_jarkij.mp4">Пляж. Жаркий сезон (2018)</h3>
-                        </div>
-                        <div class="collection-item right-item">
-                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Золото Лагина" data-genre="Жанр: Детектив, драма, триллер" data-roles="В главных ролях: А. Балуев , М. Порошина , А. Шевченко , Т. Бадалбейли, Д. Куличков, В. Верёвочкин, И. Акрачков, А.Кирсанов и др." data-videoUrl="/videos/zoloto_lagina.mp4">Золото Лагина (2019)</h3>
-                        </div>
-                        <div class="collection-item left-item">
-                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Хозяин" data-genre="Жанр: Драма, триллер" data-roles="В главных ролях:  Д. Никифоров, Е. Дрозд, И. Таранник, Н. Козак, С. Шарифуллин, П. Баранчеев, Д. Лавров, М. Овакимян, А. Богданов, Д. Юргенс и др." data-videoUrl="/videos/hozyain.mp4">Хозяин (2020)</h3>
-                        </div>
-                        <div class="collection-item right-item">
-                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Чужая стая" data-genre="Жанр: Драма, боевик" data-roles="В главных ролях:  Д. Ульянов, М. Абуладзе, Т. Казючиц, Е. Олькина, А. Шевченков, Ю. Скулябин, Е. Невар, И. Ходимчук, Д. Блохин, С. Векслер и др." data-videoUrl="/videos/chuzhaya_staya.mp4">Чужая стая (2020)</h3>
-                        </div>
-                        <div class="collection-item left-item">
-                            <h3 onclick="videoUrl(this)" id="dataset" data-header="Криминальный доктор" data-genre="Жанр: Боевик, драма, триллер" data-roles="В главных ролях: К. Сафонов, А. Снаткина, И. Жижикин, М. Горевой, Т. Колганова, А. Каштанова и др." data-videoUrl="/videos/kriminalnij_doctor.mp4">Криминальный доктор (2021)</h3>
-                        </div>
-                        <div class="collection-item right-item">
-                            <h3 onclick="videoUrl(this)" id="dataset" data-header="БиМ" data-genre="Жанр: Преступление, комедия, детектив" data-roles="В главных ролях: Д. Никифоров, А. Армер, А. Багиров, Н. Славецкая, А. Харыбин, М. Богдасаров и др." data-videoUrl="/videos/bim.mp4">БиМ (2021)</h3>
-                        </div>
+                    <div class="swiper-container" style="overflow: hidden;">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-top">
+                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Человек, который знал все" data-genre="Жанр: Драма" data-roles="В главных ролях: Егор Бероев, Максим Суханов, Екатерина Гусева, Андрей Ташков, Егор Пазенко и др." data-videoUrl="/videos/chelovek.mp4">Человек, который знал все (2009)</h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Провокатор" data-genre="Жанр: Приключенческий детектив" data-roles="В главных ролях: В.Хаев, Е.Сангаджиев, И.Волков, А.Шевченко и др." data-videoUrl="/videos/provokator.mp4">Провокатор (2011)</h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Золотой запас" data-genre="Жанр: Остросюжетный боевик" data-roles="В главных ролях: М. Мамаев, Л. Мэй, И. Волков, И. Савочкин и др." data-videoUrl="/videos/zolotoj_zapas.mp4">Золотой запас (2012)</h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Я-Ангина" data-genre="Жанр: Детектив, лирическая комедия" data-roles="В главных ролях: К. Бабушкина, Л. Полякова, М. Васьков, А. Гущин и др." data-videoUrl="/videos/angina.mp4">Я-Ангина (2013)</h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Холодное блюдо" data-genre="Жанр: Психологическая драма" data-roles="В главных ролях: И. Шакунов, Т. Черкасова, В. Веревочкин, А. Майорова, А. Наумов, И. Андреевайте и др." data-videoUrl="/videos/holodnoe.mp4">Холодное блюдо (2014)</h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Пляж" data-genre="Жанр: Детектив с элементами комедии" data-roles="В главных ролях: Г. Дронов, П. Делонг, О. Березкина, Д. Агишева и др." data-videoUrl="/videos/plyazh.mp4">Пляж (2014)</h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 style="color: rgb(221, 15, 15);" onclick="videoUrl(this)" id="dataset" data-header="Мужские каникулы" data-genre="Жанр: Роуд Муви" data-roles="В главных ролях: А. Кравченко, К. Кяро, А. Шаляпин" data-videoUrl="/videos/mujskie_kanikuli.mp4">Мужские каникулы (2014)</h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Бык и Шпиндель" data-genre="Жанр: Детектив" data-roles="В главных ролях: И. Лифанов, В. Зайцев и др." data-videoUrl="/videos/bik.mp4">Бык и Шпиндель (2015)</h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Отдел" data-genre="Жанр: Остросюжетный боевик" data-roles="В главных ролях Е.Сидихин, А.Бухаров, А.Гущин, В.Демчог, А.Заворотнюк, А.Хилькевич" data-videoUrl='none' data-poster="/videos/otdel.webp">Отдел (2016)</h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Бобры" data-genre="Жанр: Мелодрама" data-roles="В главных ролях: К. Соловьев, Е. Вуличенко, Ф. Лавров, В. Ветров, Д. Беспалый и др." data-videoUrl="/videos/bobri.mp4">Бобры (2018)</h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Пляж. Жаркий сезон" data-genre="Жанр: Детектив с элементами комедии" data-roles="В главных ролях: Г. Дронов, П. Делонг, О. Березкина и др." data-videoUrl="/videos/plyazh_jarkij.mp4">Пляж. Жаркий сезон (2018)</h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Золото Лагина" data-genre="Жанр: Детектив, драма, триллер" data-roles="В главных ролях: А. Балуев , М. Порошина , А. Шевченко , Т. Бадалбейли, Д. Куличков, В. Верёвочкин, И. Акрачков, А.Кирсанов и др." data-videoUrl="/videos/zoloto_lagina.mp4">Золото Лагина (2019)</h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Хозяин" data-genre="Жанр: Драма, триллер" data-roles="В главных ролях:  Д. Никифоров, Е. Дрозд, И. Таранник, Н. Козак, С. Шарифуллин, П. Баранчеев, Д. Лавров, М. Овакимян, А. Богданов, Д. Юргенс и др." data-videoUrl="/videos/hozyain.mp4">Хозяин (2020)</h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Чужая стая" data-genre="Жанр: Драма, боевик" data-roles="В главных ролях:  Д. Ульянов, М. Абуладзе, Т. Казючиц, Е. Олькина, А. Шевченков, Ю. Скулябин, Е. Невар, И. Ходимчук, Д. Блохин, С. Векслер и др." data-videoUrl="/videos/chuzhaya_staya.mp4">Чужая стая (2020)</h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Криминальный доктор" data-genre="Жанр: Боевик, драма, триллер" data-roles="В главных ролях: К. Сафонов, А. Снаткина, И. Жижикин, М. Горевой, Т. Колганова, А. Каштанова и др." data-videoUrl="/videos/kriminalnij_doctor.mp4">Криминальный доктор (2021)</h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 onclick="videoUrl(this)" id="dataset" data-header="БиМ" data-genre="Жанр: Преступление, комедия, детектив" data-roles="В главных ролях: Д. Никифоров, А. Армер, А. Багиров, Н. Славецкая, А. Харыбин, М. Богдасаров и др." data-videoUrl="/videos/bim.mp4">БиМ (2021)</h3>
+                            </div>
+                          </div>
+                          <div class="swiper-scrollbar"></div>
                     </div>
-                    <div class="timeline-container timeline-theme-1">
-                        <div class="timeline js-timeline">
-                          <div data-time="2017">
-                            your content or markup
-                          </div>
-                          <div data-time="2016">
-                            your content or markup
-                          </div>
-                          <div data-time="2015">
-                            your content or markup
-                          </div>
-                          <div data-time="2014">
-                            your content or markup
-                          </div>
-                          <div data-time="2013">
-                            your content or markup
-                          </div>
-                        </div>
-                      </div>
+                </div>
+                <div class="action">
+                    <div class="action-content">
+                        <img src="/img/arrow-down.svg" alt="">
+                        <span class="move-down">листай вниз</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -571,49 +561,17 @@
 
     
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="dist/js/timeline.min.js"></script>
-    <script type="text/javascript" src="/js/video-slider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> -->
+    <script type="text/javascript" src="/js/swiper-main.js"></script>
+    <!-- <script type="text/javascript" src="dist/js/timeline.min.js"></script> -->
+    <!-- <script type="text/javascript" src="/js/video-slider.js"></script> -->
     <script type="text/javascript" src="/js/projects-slider.js"></script>
     <script>
-        $('.js-timeline').Timeline();
-        const swiper = document.getElementById('projects-collection');
-        const slides = swiper.querySelectorAll('.collection-item');
-        let startY = 0;
-        let lastTranslateY = 0;
-
-        swiper.addEventListener('touchstart', (event) => {
-            startY = event.touches[0].clientY;
-            // Отключаем анимацию при начале свайпа
-            slides.forEach((slide) => {
-            slide.style.transition = 'none';
-            });
+        $(".action-content").click(function(e){
+            // window.scrollBy(0, 900);
+            window.scrollTo({ top: 917, behavior: 'smooth' })
         });
-
-        swiper.addEventListener('touchmove', (event) => {
-        const deltaY = event.touches[0].clientY - startY;
-        // Ограничиваем свайп от 0 до -480px
-        const limitedDeltaY = Math.min(Math.max(deltaY + lastTranslateY, -360), 0);
-        const transformValue = `translateY(${limitedDeltaY}px)`;
-
-        slides.forEach((slide) => {
-        slide.style.transform = transformValue;
-        });
-
-        event.preventDefault(); // Предотвращаем прокрутку страницы
-    });
-
-    swiper.addEventListener('touchend', () => {
-        slides.forEach((slide) => {
-        const transform = window.getComputedStyle(slide).getPropertyValue('transform');
-        const translateY = parseInt(transform.split(',')[5]) || 0;
-
-        lastTranslateY = translateY;
-
-        // Включаем анимацию при завершении свайпа
-        slide.style.transition = 'transform 0.3s ease-in-out';
-        slide.style.transform = `translateY(${Math.round(translateY / 14) * 14}px)`;
-        });
-    });
     </script>
   </body>
 </html>
