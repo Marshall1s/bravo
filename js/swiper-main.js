@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const direction = (windowWidth >= 1000) ? "horizontal" : "vertical";
     const slidesPerView = (windowWidth >= 1000) ? 4 : 3;
     const dragSize = (windowWidth >= 1000) ? "200" : "50";
-    console.log(direction, slidesPerView)
-    const swiper = new Swiper('.swiper-container', {
+    
+    const swiper = new Swiper('.swiper-top-container', {
         // Optional parameters
         direction: direction,
         loop: false,
@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", function() {
             dragSize: dragSize
         },
     });
+
+    // const swiperProjects = 
     const swiperSlides = document.querySelectorAll("#dataset")
     $(".swiper-slide").click(function(e){
         swiperSlides.forEach((slide, i) => {
