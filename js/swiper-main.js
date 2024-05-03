@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
         mousewheel: true,
         scrollbar: {
             el: '.swiper-scrollbar',
-            draggable: false,
+            draggable: true,
             horizontalClass: "scrollbar_custom",
             verticalClass: "scrollbar_custom",
             // hide: "true"
