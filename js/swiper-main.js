@@ -1,5 +1,23 @@
+const windowWidth = window.innerWidth;
+const slidesPerViewProjects = (windowWidth >= 1000) ? 4 : 2;
+
+const swiperProjects = new Swiper('.swiper-projects-container', {
+    // Optional parameters
+    direction: "vertical",
+    loop: false,
+    slidesPerView: slidesPerViewProjects,
+    watchOverflow: 'false',
+    speed: "600",
+    // initialSlide: 1,
+    mousewheel: true,
+    navigation: {
+        nextEl: '.slider-control-next',
+        prevEl: '.slider-control-prev',
+      },
+});
+
 document.addEventListener("DOMContentLoaded", function() {
-    const windowWidth = window.innerWidth;
+    // const windowWidth = window.innerWidth;
     const direction = (windowWidth >= 1000) ? "horizontal" : "vertical";
     const slidesPerView = (windowWidth >= 1000) ? 4 : 3;
     const dragSize = (windowWidth >= 1000) ? "200" : "50";
@@ -23,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     });
 
-    // const swiperProjects = 
     const swiperSlides = document.querySelectorAll("#dataset")
     $(".swiper-slide").click(function(e){
         swiperSlides.forEach((slide, i) => {
@@ -33,11 +50,55 @@ document.addEventListener("DOMContentLoaded", function() {
                 slide.style.color = "rgb(255, 255, 255)";
             }
         });
-        if (windowWidth >= 1000) {
-            swiper.slideNext();
-        }
+        // if (windowWidth >= 1000) {
+        //     swiper.slideNext();
+        // }
     });
+
+   
+    // document.querySelector(".slider-control-next").addEventListener('click', nextProjectSlide());
+
     
+    // let currentIndex = 1;
+    
+    function changeSlide() {
+        // const slidePosition = sliderContainer.querySelector(".swiper-slide-active").ariaLabel;
+        // const totalSlides = slidePosition.split("/")[1].trim()
+        // const currentPosition = slidePosition.split("/")[0].trim()
+        // console.log(totalSlides + " " + currentIndex)
+        // currentIndex = newIndex;
+        // const newIndex = (index + totalSlides) % totalSlides;
+        const sliderContainer = document.querySelector(".swiper-projects-container")
+        const nextSlideDataset = sliderContainer.querySelector(".swiper-slide-active").dataset;
+        const nextSlideDescr = document.querySelector(".swiper-projects-container").querySelector(".swiper-slide-active").querySelector(".swiper-projects-descr").innerHTML
+        const sliderPlace = document.querySelector(".projects__slide")
+        const slideStatus = sliderPlace.querySelector(".slide__status")
+        const slideTitle = sliderPlace.querySelector(".slide__title-h")
+        const slideGenre = sliderPlace.querySelector(".description-genre")
+        const slideRoles =  sliderPlace.querySelector(".description-roles")
+        const slideDescr = sliderPlace.querySelector(".overlay-text")
+        const slideImg = sliderPlace.querySelector(".projects__slide-img")
+
+        slideStatus.innerHTML = nextSlideDataset.status
+        slideTitle.innerHTML = nextSlideDataset.header
+        slideGenre.innerHTML = nextSlideDataset.genre
+        slideRoles.innerHTML = nextSlideDataset.roles
+        slideDescr.innerHTML = nextSlideDescr
+        slideImg.style.backgroundImage = "url("+nextSlideDataset.pictureurl+")"; 
+    }
+
+    var prevProjectSlideButton = document.querySelector(".slider-control-prev");
+    var nextProjectSlideButton = document.querySelector(".slider-control-next");
+
+
+
+    nextProjectSlideButton.addEventListener('click', function() {
+        changeSlide();
+    });
+    prevProjectSlideButton.addEventListener('click', function() {
+        changeSlide();
+    });
+
     let vid = document.getElementById("video_slider");
     vid.onended = function() {
         var videoHeader = vid.nextElementSibling.getElementsByTagName("h3")[0].innerText
@@ -81,4 +142,26 @@ function videoUrl(slide) {
         videoSlide.controls = true
         videoSlide.poster = ""
     }
+}
+
+function changeSlideOnClick(e) {
+    console.log(e.dataset)
+
+    const nextSlideDescr = e.querySelector(".swiper-projects-descr").innerHTML
+    const sliderPlace = document.querySelector(".projects__slide")
+    const slideStatus = sliderPlace.querySelector(".slide__status")
+    const slideTitle = sliderPlace.querySelector(".slide__title-h")
+    const slideGenre = sliderPlace.querySelector(".description-genre")
+    const slideRoles =  sliderPlace.querySelector(".description-roles")
+    const slideDescr = sliderPlace.querySelector(".overlay-text")
+    const slideImg = sliderPlace.querySelector(".projects__slide-img")
+
+    slideStatus.innerHTML = e.dataset.status
+    slideTitle.innerHTML = e.dataset.header
+    slideGenre.innerHTML = e.dataset.genre
+    slideRoles.innerHTML = e.dataset.roles
+    slideDescr.innerHTML = nextSlideDescr
+    slideImg.style.backgroundImage = "url("+e.dataset.pictureurl+")"; 
+    var lastClicked = swiperProjects.clickedIndex
+    swiperProjects.slideTo(lastClicked, 600, true)
 }

@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   
       const translateValue = -newIndex * 100 + '%';
-      console.log('translateValue:', translateValue);
       slider.style.transform = 'translateX(' + translateValue + ')';
       currentIndex = newIndex;
     }

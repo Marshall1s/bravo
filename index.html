@@ -153,168 +153,149 @@
                         </p>
                     </a>
                 </div>
-                <div class="projects__slider">
-                    <div class="slider-inner">
-                        <div class="projects__slide active">
-                            <p class="slide__status">
-                                (В производстве)
-                            </p>
-                            <div class="slide__title">
-                                <h2>
-                                    БиМ-продолжение
-                                </h2>
-                            </div>
-                            <div class="slide__description">
-                                <p>
-                                    Жанр: Преступление, комедия, детектив
-                                </p>
-                            </div>
-                            <div class="project__detailed"> 
-                                <img src="/img/projects/slider/bim.svg" loading="lazy" alt="image" class="image" />
-                                <div class="overlay">
-                                    <p>
-                                        В полицейском участке приморского портового города ходят слухи, что капитана Макара Климова сослали к ним из Москвы из-за романа с женой большого начальника с Петровки. Правда это или нет — никто не знает. На юге Макару нравится: свежий воздух, красивые женщины, нет столичной суеты. А дом, в который его поселили, находится прямо на берегу моря. Первое впечатление от тихой провинциальной жизни у Климова быстро проходит: контрабанда, наркотики, торговля людьми — целый криминальный набор, бороться с которым в этом городке приходится практически в одиночку.
-                                    </p>
-                                </div> 
-                            </div>
+                <div class="slider-inner">
+                    <div class="projects__slide active">
+                        <p class="slide__status">
+                            (Завершен)
+                        </p>
+                        <div class="slide__title">
+                            <h2 class="slide__title-h">
+                                Человек, который знал все
+                            </h2>
                         </div>
-                        <div class="projects__slide">
-                            <p class="slide__status">
-                                (Завершен)
+                        <div class="slide__description">
+                            <p class="description-genre">
+                                Жанр: Драма
                             </p>
-                            <div class="slide__title">
-                                <h2>
-                                    Человек, который знал все
-                                </h2>
-                            </div>
-                            <div class="slide__description">
-                                <p>
-                                    Жанр: Драма
+                            <p class="description-roles"> 
+                                В главных ролях: Егор Бероев, Максим Суханов, Екатерина Гусева, Андрей Ташков, Егор Пазенко и др.
+                            </p>
+                        </div>
+                        <div class="project__detailed"> 
+                            <div class="projects__slide-img"></div>
+                            <!-- <img src="/img/projects/slider/chelovek.svg" loading="lazy" alt="image" class="image" /> -->
+                            <div class="overlay">
+                                <p class="overlay-text">
+                                    Главный герой романа, интеллигентный историк Александр Безукладников  в результате отчаянной попытки самоубийства неожиданно обретает феноменальную способность - мгновенно получать ответ на любой вопрос. Скромный и безобидный, он становится лакомой дичью для всех - женщин, криминальных авторитетов и даже международных спецслужб. Одни пытаются его использовать, другие - уничтожить. Но «маленький человек» продолжает жить по законам своей собственной совести…
                                 </p>
-                            </div>
-                            <div class="project__detailed top-33px"> 
-                                <img src="/img/projects/slider/chelovek.svg" loading="lazy" alt="image" class="image" />
-                                <div class="overlay">
-                                    <p>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__slider">     
+                    <div class="swiper-container swiper-projects-container">
+                        <div class="swiper-wrapper swiper-wrapper-projects" >
+                            <div class="swiper-slide swiper-projects-slide" onclick="changeSlideOnClick(this)" 
+                                data-status="(Завершен)"
+                                data-header="Человек, который знал все" 
+                                data-genre="Жанр: Драма" 
+                                data-roles="В главных ролях: Егор Бероев, Максим Суханов, Екатерина Гусева, Андрей Ташков, Егор Пазенко и др."
+                                data-pictureurl="/img/projects/slider/chelovek.svg">
+                                <div class="swiper-projects-info">
+                                    <h3 class="swiper-projects-title">
+                                        Человек, который знал все
+                                    </h3>
+                                    <p class="swiper-projects-descr">
                                         Главный герой романа, интеллигентный историк Александр Безукладников  в результате отчаянной попытки самоубийства неожиданно обретает феноменальную способность - мгновенно получать ответ на любой вопрос. Скромный и безобидный, он становится лакомой дичью для всех - женщин, криминальных авторитетов и даже международных спецслужб. Одни пытаются его использовать, другие - уничтожить. Но «маленький человек» продолжает жить по законам своей собственной совести…
                                     </p>
-                                </div> 
+                                </div>
+                                <img class="swiper-projects-img" loading="lazy" src="/img/projects/slider-min/chelovek.svg" alt="">
                             </div>
-                        </div>
-                        <div class="projects__slide">
-                            <p class="slide__status">
-                                (Завершен)
-                            </p>
-                            <div class="slide__title">
-                                <h2>
-                                    Золотой запас
-                                </h2>
-                            </div>
-                            <div class="slide__description">
-                                <p>
-                                    Жанр: Остросюжетный боевик
-                                </p>
-                            </div>
-                            <div class="project__detailed"> 
-                                <img src="/img/projects/slider/zolotoj.svg" loading="lazy" alt="image" class="image" />
-                                <div class="overlay">
-                                    <p>
-                                        В новом сезоне главные герои – Петр Гриневский и Алексей Карташ сталкиваются с умным и хитрым врагом из их прошлого, который долгое время вынашивал план мести  и, наконец, получил возможность осуществить их. Гриневского и Карташа обвиняют в  том, что несколько лет назад они утаили от государства часть найденной платины. Более того, именно их пытаются представить хозяевами нового тайного платинового прииска...
+                            <div class="swiper-slide swiper-projects-slide" onclick="changeSlideOnClick(this)" 
+                                data-status="(Завершен)"
+                                data-header="Провокатор" 
+                                data-genre="Жанр: Приключенческий детектив" 
+                                data-roles="В главных ролях: В.Хаев, Е.Сангаджиев, И.Волков, А.Шевченко и др."
+                                data-pictureurl="/img/projects/slider/provokator.svg">
+                                <div class="swiper-projects-info">
+                                    <h3 class="swiper-projects-title">
+                                        Провокатор
+                                    </h3>
+                                    <p class="swiper-projects-descr">
+                                        Подложить или не подложить кошелек в карман вора, если ты уверен, что он вор? Подбросить наркотики дилеру, взрывчатку террористу, если ты уверен, что это — наркоторговец и террорист? Для старшего следователя СКП Панкратова ответ на подобные вопросы однозначен: – да. Потому что его оперативный метод — провокация. А сам Панкратов – провокатор...
                                     </p>
-                                </div> 
+                                </div>
+                                <img class="swiper-projects-img" loading="lazy" src="/img/projects/slider-min/provokator.svg" alt="">
                             </div>
-                        </div>
-                        <div class="projects__slide">
-                            <p class="slide__status">
-                                (Завершен)
-                            </p>
-                            <div class="slide__title">
-                                <h2>
-                                    Я-Ангина!
-                                </h2>
+                            <div class="swiper-slide swiper-projects-slide" onclick="changeSlideOnClick(this)" 
+                                data-status="(Завершен)"
+                                data-header="Золотой запас" 
+                                data-genre="Жанр: Остросюжетный боевик" 
+                                data-roles="В главных ролях: М. Мамаев, Л. Мэй, И. Волков, И. Савочкин и др."
+                                data-pictureurl="/img/projects/slider/zolotoj.svg">
+                                <div class="swiper-projects-info">
+                                    <h3 class="swiper-projects-title">
+                                        Золотой запас
+                                    </h3>
+                                    <p class="swiper-projects-descr">
+                                        В новом сезоне главные герои – Петр Гриневский и Алексей Карташ сталкиваются с умным и хитрым врагом из их прошлого, который долгое время вынашивал план мести  и, наконец, получил возможность осуществить их. Гриневского и Карташа обвиняют в  том, что несколько лет назад они утаили от государства часть найденной платины. Более того, именно их пытаются представить хозяевами нового тайного платинового прииска...
+                                    </p>
+                                </div>
+                                <img class="swiper-projects-img" loading="lazy" src="/img/projects/slider-min/zolotoj_zapas.svg" alt="">
                             </div>
-                            <div class="slide__description">
-                                <p>
-                                    Жанр: Детектив, лирическая комедия
-                                </p>
-                            </div>
-                            <div class="project__detailed"> 
-                                <img src="/img/projects/slider/angina.svg" loading="lazy" alt="image" class="image" />
-                                <div class="overlay">
-                                    <p>
+                            <div class="swiper-slide swiper-projects-slide" onclick="changeSlideOnClick(this)" 
+                                data-status="(Завершен)"
+                                data-header="Я-Ангина!" 
+                                data-genre="Жанр: Детектив, лирическая комедия" 
+                                data-roles="В главных ролях: К. Бабушкина, Л. Полякова, М. Васьков, А. Гущин и др."
+                                data-pictureurl="/img/projects/slider/angina.svg">
+                                <div class="swiper-projects-info">
+                                    <h3 class="swiper-projects-title">
+                                        Я-Ангина!
+                                    </h3>
+                                    <p class="swiper-projects-descr">
                                         Маруся, по прозвищу «Ангина», была девушка добрая и духом, и телом. Молодуха, чуть за тридцать, крепкая, с «широкой костью». Если за что-то бралась – делала с жаром, не раздумывая. Трудилась мотальщицей, имела квартиру и мужа, гражданского, но мужа – Ваську. Васька был неказист, нескладен, не сильно удачлив, но Маруся его любила – пусть «плохонький» но её. В поисках заработка Васька рванул в областной центр..
                                     </p>
-                                </div> 
+                                </div>
+                                <img class="swiper-projects-img" loading="lazy" src="/img/projects/slider-min/angina.svg" alt="">
                             </div>
-                        </div>
-                        <div class="projects__slide">
-                            <p class="slide__status">
-                                (Завершен)
-                            </p>
-                            <div class="slide__title">
-                                <h2>
-                                    Холодное блюдо
-                                </h2>
-                            </div>
-                            <div class="slide__description">
-                                <p>
-                                    Жанр: Психологическая драма
-                                </p>
-                            </div>
-                            <div class="project__detailed"> 
-                                <img src="/img/projects/slider/holodnoe.svg" loading="lazy" alt="image" class="image" />
-                                <div class="overlay">
-                                    <p>
+                            <div class="swiper-slide swiper-projects-slide" onclick="changeSlideOnClick(this)" 
+                                data-status="(Завершен)"
+                                data-header="Холодное блюдо" 
+                                data-genre="Жанр: Психологическая драма" 
+                                data-roles="В главных ролях: К. Бабушкина, Л. Полякова, М. Васьков, А. Гущин и др."
+                                data-pictureurl="/img/projects/slider/holodnoe.svg">
+                                <div class="swiper-projects-info">
+                                    <h3 class="swiper-projects-title">
+                                        Холодное блюдо
+                                    </h3>
+                                    <p class="swiper-projects-descr">
                                         Чета Завьяловых, Александр и Лена становятся невольно втянутыми в криминальную историю с похищением дочери губернатора. Благодаря навыками и умениям приобретенным «в прошлой жизни» Завьялову удается не только спастись, но и спасти девочку. Но медийная популярность работает против Александра и его находят «тени прошлого» - соратники по прошлой жизни. Спасая себя и своих близких герой проходит сложный путь становления внутри семейных отношений...
                                     </p>
-                                </div> 
+                                </div>
+                                <img class="swiper-projects-img" loading="lazy" src="/img/projects/slider-min/holodnoe_bludo.svg" alt="">
                             </div>
-                        </div>
-                        <div class="projects__slide">
-                            <p class="slide__status">
-                                (Завершен)
-                            </p>
-                            <div class="slide__title">
-                                <h2>
-                                    Пляж
-                                </h2>
-                            </div>
-                            <div class="slide__description">
-                                <p>
-                                    Жанр: Детектив с элементами комедии
-                                </p>
-                            </div>
-                            <div class="project__detailed"> 
-                                <img src="/img/projects/slider/plyazh.svg" loading="lazy" alt="image" class="image" />
-                                <div class="overlay">
-                                    <p>
-                                        Сергей Парамонов уже десять лет является начальником пляжа небольшого курортного городка Азовска на Черноморском побережье. Пляж – место хлебное, но шумное и беспокойное. Десять лет назад Парамонов служил опером здесь же, в родном курортном городке Азовске, в районном отделе милиции, расположенном буквально через дорогу от администрации пляжа, его нынешней резиденцией.
+                            <div class="swiper-slide swiper-projects-slide" onclick="changeSlideOnClick(this)" 
+                                data-status="(Завершен)"
+                                data-header="Пляж" 
+                                data-genre="Жанр: Детектив с элементами комедии" 
+                                data-roles="В главных ролях: Г. Дронов, П. Делонг, О. Березкина, Д. Агишева и др."
+                                data-pictureurl="/img/projects/slider/holodnoe.svg">
+                                <div class="swiper-projects-info">
+                                    <h3 class="swiper-projects-title">
+                                        Пляж
+                                    </h3>
+                                    <p class="swiper-projects-descr">
+                                        Сергей Парамонов уже десять лет является начальником пляжа небольшого курортного городка Азовска на Черноморском побережье. Пляж – место хлебное, но шумное и беспокойное. Десять лет назад Парамонов служил опером здесь же, в родном курортном городке Азовске, в районном отделе милиции, расположенном буквально через дорогу от администрации пляжа, его нынешней резиденцией. К этому времени начальником родного Приморского ГУВД стал его друг детства и бывший однокашник по юрфаку Андрей Гошко, получивший к этому времени майорскую звездочку. Поскольку администрация пляжа и ГУВД находятся буквально в пятидесяти метрах друг от друга, то видятся лучшие друзья каждый день и не по разу.
                                     </p>
-                                </div> 
+                                </div>
+                                <img class="swiper-projects-img" loading="lazy" src="/img/projects/slider-min/plyazh.svg" alt="">
                             </div>
-                        </div>
-                        <div class="projects__slide">
-                            <p class="slide__status">
-                                (Завершен)
-                            </p>
-                            <div class="slide__title">
-                                <h2>
-                                    Мужские каникулы
-                                </h2>
-                            </div>
-                            <div class="slide__description">
-                                <p>
-                                    Жанр: Роуд муви
-                                </p>
-                            </div>
-                            <div class="project__detailed"> 
-                                <img src="/img/projects/slider/mujskie.svg" loading="lazy" alt="image" class="image" />
-                                <div class="overlay">
-                                    <p>
-                                        История о том, как трое успешных и богатых бизнесменов лет около сорока, которые пресытились «цивильным» отдыхом,  решают провести отпуск в экстремальных условиях.
-                                        По прибытии на место (Северный Урал) их снабжают охотничьим оружием и всем необходимым снаряжением, чтобы выживать в тайге за сотни километров от ближайшего жилья, куда их забрасывают вертолётом. В ассортименте – охота, рыбная ловля и промывка золота старательским способом. Из продуктов только соль, сахар, чай и сухари (галеты), всё остальное для своего стола «отдыхающие» должны добыть и приготовить сами...
+                            <div class="swiper-slide swiper-projects-slide" onclick="changeSlideOnClick(this)" 
+                                data-status="(Завершен)"
+                                data-header="Пляж" 
+                                data-genre="Жанр: Детектив с элементами комедии" 
+                                data-roles="В главных ролях: Г. Дронов, П. Делонг, О. Березкина, Д. Агишева и др."
+                                data-pictureurl="/img/projects/slider/holodnoe.svg">
+                                <div class="swiper-projects-info">
+                                    <h3 class="swiper-projects-title">
+                                        Пляж
+                                    </h3>
+                                    <p class="swiper-projects-descr">
+                                        Сергей Парамонов уже десять лет является начальником пляжа небольшого курортного городка Азовска на Черноморском побережье. Пляж – место хлебное, но шумное и беспокойное. Десять лет назад Парамонов служил опером здесь же, в родном курортном городке Азовске, в районном отделе милиции, расположенном буквально через дорогу от администрации пляжа, его нынешней резиденцией. К этому времени начальником родного Приморского ГУВД стал его друг детства и бывший однокашник по юрфаку Андрей Гошко, получивший к этому времени майорскую звездочку. Поскольку администрация пляжа и ГУВД находятся буквально в пятидесяти метрах друг от друга, то видятся лучшие друзья каждый день и не по разу.
                                     </p>
-                                </div> 
+                                </div>
+                                <img class="swiper-projects-img" loading="lazy" src="/img/projects/slider-min/plyazh.svg" alt="">
                             </div>
                         </div>
                     </div>
@@ -326,20 +307,8 @@
                             <img src="/img/projects/slider/next.svg" alt="Next">
                         </button>
                     </div>
-                    <div class="swiper-container swiper-projects-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide swiper-projects-slide">
-                                <h3 class="swiper-projects-title">
-                                    Человек, который знал все
-                                </h3>
-                                <p class="swiper-projects-descr">
-                                    Главный герой романа, интеллигентный историк Александр Безукладников  в результате отчаянной попытки самоубийства неожиданно обретает феноменальную способность - мгновенно получать ответ на любой вопрос. Скромный и безобидный, он становится лакомой дичью для всех - женщин, криминальных авторитетов и даже международных спецслужб. Одни пытаются его использовать, другие - уничтожить. Но «маленький человек» продолжает жить по законам своей собственной совести…
-                                </p>
-                                <img class="swiper-projects-img" src="/img/projects/slider-min/chelovek.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
                 </div>
+                
             </div>
         </section>
         <!-- section projects end -->
