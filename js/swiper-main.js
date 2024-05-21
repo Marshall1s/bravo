@@ -1,5 +1,7 @@
+const windowGap = 800;
 const windowWidth = window.innerWidth;
-const slidesPerViewProjects = (windowWidth >= 1000) ? 4 : 2;
+const slidesPerViewProjects = (windowWidth >= windowGap) ? 4 : 2;
+
 
 const swiperProjects = new Swiper('.swiper-projects-container', {
     // Optional parameters
@@ -18,9 +20,9 @@ const swiperProjects = new Swiper('.swiper-projects-container', {
 
 document.addEventListener("DOMContentLoaded", function() {
     // const windowWidth = window.innerWidth;
-    const direction = (windowWidth >= 1000) ? "horizontal" : "vertical";
-    const slidesPerView = (windowWidth >= 1000) ? 4 : 3;
-    const dragSize = (windowWidth >= 1000) ? "200" : "50";
+    const direction = (windowWidth >= windowGap) ? "horizontal" : "vertical";
+    const slidesPerView = (windowWidth >= windowGap) ? 4 : 3;
+    const dragSize = (windowWidth >= windowGap) ? "200" : "50";
     
     const swiper = new Swiper('.swiper-top-container', {
         // Optional parameters
@@ -50,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 slide.style.color = "rgb(255, 255, 255)";
             }
         });
-        // if (windowWidth >= 1000) {
+        // if (windowWidth >= windowGap) {
         //     swiper.slideNext();
         // }
     });
@@ -84,7 +86,11 @@ document.addEventListener("DOMContentLoaded", function() {
         slideGenre.innerHTML = nextSlideDataset.genre
         slideRoles.innerHTML = nextSlideDataset.roles
         slideDescr.innerHTML = nextSlideDescr
-        slideImg.style.backgroundImage = "url("+nextSlideDataset.pictureurl+")"; 
+        if (windowWidth > windowGap) {
+            slideImg.style.backgroundImage = "url("+nextSlideDataset.pictureurlpc+")"; 
+        } else {
+            slideImg.style.backgroundImage = "url("+nextSlideDataset.pictureurl+")"; 
+        }
     }
 
     var prevProjectSlideButton = document.querySelector(".slider-control-prev");
@@ -145,8 +151,6 @@ function videoUrl(slide) {
 }
 
 function changeSlideOnClick(e) {
-    console.log(e.dataset)
-
     const nextSlideDescr = e.querySelector(".swiper-projects-descr").innerHTML
     const sliderPlace = document.querySelector(".projects__slide")
     const slideStatus = sliderPlace.querySelector(".slide__status")
@@ -161,7 +165,14 @@ function changeSlideOnClick(e) {
     slideGenre.innerHTML = e.dataset.genre
     slideRoles.innerHTML = e.dataset.roles
     slideDescr.innerHTML = nextSlideDescr
-    slideImg.style.backgroundImage = "url("+e.dataset.pictureurl+")"; 
+     
+    if (windowWidth > windowGap) {
+        slideImg.style.backgroundImage = "url("+e.dataset.pictureurlpc+")"; 
+        slideImg.style.backgroundRepeat = "no-repeat";
+    } else {
+        slideImg.style.backgroundImage = "url("+e.dataset.pictureurl+")"; 
+        slideImg.style.backgroundRepeat = "no-repeat";
+    }
     var lastClicked = swiperProjects.clickedIndex
-    swiperProjects.slideTo(lastClicked, 600, true)
+    swiperProjects.slideTo(lastClicked, 600, false)
 }
