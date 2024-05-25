@@ -79,6 +79,9 @@
         justify-content: center;
         align-items: center;
     }
+    .swiper.mySwiper2 .swiper-slide img {
+        border-radius: 10px;
+    }
     .swiper-container {
         height: 150px;
     }

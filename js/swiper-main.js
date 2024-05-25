@@ -49,6 +49,10 @@ var swiper2 = new Swiper(".mySwiper2", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+      },
     thumbs: {
         swiper: swiper,
     },
@@ -139,23 +143,23 @@ document.addEventListener("DOMContentLoaded", function() {
         changeSlide();
     });
 
-    let vid = document.getElementById("video_slider");
-    vid.onended = function() {
-        var videoHeader = vid.nextElementSibling.getElementsByTagName("h3")[0].innerText
-        Array.from(document.getElementsByClassName("swiper-top")).forEach(
-            function(div, index, array) {
-                data = div.getElementsByTagName("h3");
-                if (videoHeader == data.dataset.dataset.header) {
-                    if (index != (array.length - 1)) {
-                        videoUrl(div.nextElementSibling.getElementsByTagName("h3")[0])
-                        swiper.slideNext();
-                    } else {
-                        // videoUrl(array[0].getElementsByTagName("h3")[0])
-                    }
-                }
-            }
-        );
-    };
+    // let vid = document.getElementById("video_slider");
+    // vid.onended = function() {
+    //     var videoHeader = vid.nextElementSibling.getElementsByTagName("h3")[0].innerText
+    //     Array.from(document.getElementsByClassName("swiper-top")).forEach(
+    //         function(div, index, array) {
+    //             data = div.getElementsByTagName("h3");
+    //             if (videoHeader == data.dataset.dataset.header) {
+    //                 if (index != (array.length - 1)) {
+    //                     videoUrl(div.nextElementSibling.getElementsByTagName("h3")[0])
+    //                     swiper.slideNext();
+    //                 } else {
+    //                     // videoUrl(array[0].getElementsByTagName("h3")[0])
+    //                 }
+    //             }
+    //         }
+    //     );
+    // };
 })
 
 // function videoUrl(slide) {
