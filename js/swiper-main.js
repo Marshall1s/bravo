@@ -1,6 +1,9 @@
 const windowGap = 800;
 const windowWidth = window.innerWidth;
 const slidesPerViewProjects = (windowWidth >= windowGap) ? 4 : 2;
+const direction = (windowWidth >= windowGap) ? "horizontal" : "vertical";
+const slidesPerView = (windowWidth >= windowGap) ? 4 : 3;
+const dragSize = (windowWidth >= windowGap) ? "200" : "50";
 
 
 const swiperProjects = new Swiper('.swiper-projects-container', {
@@ -18,44 +21,75 @@ const swiperProjects = new Swiper('.swiper-projects-container', {
       },
 });
 
+var swiper = new Swiper(".mySwiper", {
+    loop: false,
+    spaceBetween: 10,
+    slidesPerView: slidesPerView,
+    speed: "800",
+    freeMode: true,
+    direction: direction,
+    watchSlidesProgress: true,
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+        horizontalClass: "scrollbar_custom",
+        verticalClass: "scrollbar_custom",
+        // hide: "true"
+        dragSize: dragSize
+    },
+});
+
+var swiper2 = new Swiper(".mySwiper2", {
+    loop: false,
+    spaceBetween: 10,
+    mousewheel: true,
+    // effect: "creative",
+    speed: "800",
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+        swiper: swiper,
+    },
+});
+
 document.addEventListener("DOMContentLoaded", function() {
     // const windowWidth = window.innerWidth;
-    const direction = (windowWidth >= windowGap) ? "horizontal" : "vertical";
-    const slidesPerView = (windowWidth >= windowGap) ? 4 : 3;
-    const dragSize = (windowWidth >= windowGap) ? "200" : "50";
     
-    const swiper = new Swiper('.swiper-top-container', {
-        // Optional parameters
-        direction: direction,
-        loop: false,
-        slidesPerView: slidesPerView,
-        watchOverflow: 'true',
-        speed: "600",
-        initialSlide: 6,
-        mousewheel: true,
-        scrollbar: {
-            el: '.swiper-scrollbar',
-            draggable: true,
-            horizontalClass: "scrollbar_custom",
-            verticalClass: "scrollbar_custom",
-            // hide: "true"
-            dragSize: dragSize
-        },
-    });
+    
+    // const swiper = new Swiper('.swiper-top-container', {
+    //     // Optional parameters
+    //     direction: direction,
+    //     loop: false,
+    //     slidesPerView: slidesPerView,
+    //     watchOverflow: 'true',
+    //     speed: "600",
+    //     initialSlide: 6,
+    //     mousewheel: true,
+    //     scrollbar: {
+    //         el: '.swiper-scrollbar',
+    //         draggable: true,
+    //         horizontalClass: "scrollbar_custom",
+    //         verticalClass: "scrollbar_custom",
+    //         // hide: "true"
+    //         dragSize: dragSize
+    //     },
+    // });
 
-    const swiperSlides = document.querySelectorAll("#dataset")
-    $(".swiper-slide").click(function(e){
-        swiperSlides.forEach((slide, i) => {
-            if (e.target.dataset.header === slide.dataset.header) {
-                e.target.style.color = "rgb(221, 15, 15)";
-            } else {
-                slide.style.color = "rgb(255, 255, 255)";
-            }
-        });
-        // if (windowWidth >= windowGap) {
-        //     swiper.slideNext();
-        // }
-    });
+    // const swiperSlides = document.querySelectorAll("#dataset")
+    // $(".swiper-slide").click(function(e){
+    //     swiperSlides.forEach((slide, i) => {
+    //         if (e.target.dataset.header === slide.dataset.header) {
+    //             e.target.style.color = "rgb(221, 15, 15)";
+    //         } else {
+    //             slide.style.color = "rgb(255, 255, 255)";
+    //         }
+    //     });
+    //     // if (windowWidth >= windowGap) {
+    //     //     swiper.slideNext();
+    //     // }
+    // });
 
    
     // document.querySelector(".slider-control-next").addEventListener('click', nextProjectSlide());
@@ -124,31 +158,31 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 })
 
-function videoUrl(slide) {
-    // document.getElementById("video_slider").src = slider;
-    const videoSlide = document.getElementById("video_slider");
-    // const sliderInfo = document.getElementById("video-info");
-    const videoName = document.getElementById("video-header")
-    const videoGenre = document.getElementById("video-genre")
-    const videoRoles = document.getElementById("video-roles")
+// function videoUrl(slide) {
+//     // document.getElementById("video_slider").src = slider;
+//     const videoSlide = document.getElementById("video_slider");
+//     // const sliderInfo = document.getElementById("video-info");
+//     const videoName = document.getElementById("video-header")
+//     const videoGenre = document.getElementById("video-genre")
+//     const videoRoles = document.getElementById("video-roles")
     
-    videoName.innerHTML = slide.dataset.header
-    videoGenre.innerHTML = slide.dataset.genre
-    videoRoles.innerHTML = slide.dataset.roles
-    if (slide.dataset.videourl == "none") {
+//     videoName.innerHTML = slide.dataset.header
+//     videoGenre.innerHTML = slide.dataset.genre
+//     videoRoles.innerHTML = slide.dataset.roles
+//     if (slide.dataset.videourl == "none") {
  
-        videoSlide.poster = slide.dataset.poster 
+//         videoSlide.poster = slide.dataset.poster 
 
-        videoSlide.autoplay = false
-        videoSlide.controls = false
-        videoSlide.src = slide.dataset.poster
-    } else {
-        videoSlide.src = slide.dataset.videourl
-        videoSlide.autoplay = true
-        videoSlide.controls = true
-        videoSlide.poster = ""
-    }
-}
+//         videoSlide.autoplay = false
+//         videoSlide.controls = false
+//         videoSlide.src = slide.dataset.poster
+//     } else {
+//         videoSlide.src = slide.dataset.videourl
+//         videoSlide.autoplay = true
+//         videoSlide.controls = true
+//         videoSlide.poster = ""
+//     }
+// }
 
 function changeSlideOnClick(e) {
     const nextSlideDescr = e.querySelector(".swiper-projects-descr").innerHTML

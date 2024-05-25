@@ -33,7 +33,7 @@
         <section class="top-slider">
             <div class="container">
                 <div class="top-slider-container">
-                    <div class="video-slider">
+                    <!-- <div class="video-slider">
                         <div class="video-slide active">
                             <video class="movie-video" controls autoplay muted id="video_slider">
                                 <source src="/videos/mujskie_kanikuli.mp4" type="video/mp4">
@@ -45,59 +45,853 @@
                                 <p id="video-roles">В главных ролях А.Кравченко, К.Кяро, А. Шаляпин</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-container swiper-top-container" style="overflow: hidden;">
+                    </div> -->
+                    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide swiper-top">
-                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Человек, который знал все" data-genre="Жанр: Драма" data-roles="В главных ролях: Егор Бероев, Максим Суханов, Екатерина Гусева, Андрей Ташков, Егор Пазенко и др." data-videoUrl="/videos/chelovek.mp4">Человек, который знал все (2009)</h3>
-                            </div>
-                            <div class="swiper-slide swiper-top">
-                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Провокатор" data-genre="Жанр: Приключенческий детектив" data-roles="В главных ролях: В.Хаев, Е.Сангаджиев, И.Волков, А.Шевченко и др." data-videoUrl="/videos/provokator.mp4">Провокатор (2011)</h3>
-                            </div>
-                            <div class="swiper-slide swiper-top">
-                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Золотой запас" data-genre="Жанр: Остросюжетный боевик" data-roles="В главных ролях: М. Мамаев, Л. Мэй, И. Волков, И. Савочкин и др." data-videoUrl="/videos/zolotoj_zapas.mp4">Золотой запас (2012)</h3>
-                            </div>
-                            <div class="swiper-slide swiper-top">
-                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Я-Ангина" data-genre="Жанр: Детектив, лирическая комедия" data-roles="В главных ролях: К. Бабушкина, Л. Полякова, М. Васьков, А. Гущин и др." data-videoUrl="/videos/angina.mp4">Я-Ангина (2013)</h3>
-                            </div>
-                            <div class="swiper-slide swiper-top">
-                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Холодное блюдо" data-genre="Жанр: Психологическая драма" data-roles="В главных ролях: И. Шакунов, Т. Черкасова, В. Веревочкин, А. Майорова, А. Наумов, И. Андреевайте и др." data-videoUrl="/videos/holodnoe.mp4">Холодное блюдо (2014)</h3>
-                            </div>
-                            <div class="swiper-slide swiper-top">
-                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Пляж" data-genre="Жанр: Детектив с элементами комедии" data-roles="В главных ролях: Г. Дронов, П. Делонг, О. Березкина, Д. Агишева и др." data-videoUrl="/videos/plyazh.mp4">Пляж (2014)</h3>
-                            </div>
-                            <div class="swiper-slide swiper-top">
-                                <h3 style="color: rgb(221, 15, 15);" onclick="videoUrl(this)" id="dataset" data-header="Мужские каникулы" data-genre="Жанр: Роуд Муви" data-roles="В главных ролях: А. Кравченко, К. Кяро, А. Шаляпин" data-videoUrl="/videos/mujskie_kanikuli.mp4">Мужские каникулы (2014)</h3>
-                            </div>
-                            <div class="swiper-slide swiper-top">
-                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Бык и Шпиндель" data-genre="Жанр: Детектив" data-roles="В главных ролях: И. Лифанов, В. Зайцев и др." data-videoUrl="/videos/bik.mp4">Бык и Шпиндель (2015)</h3>
-                            </div>
-                            <div class="swiper-slide swiper-top">
-                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Отдел" data-genre="Жанр: Остросюжетный боевик" data-roles="В главных ролях Е.Сидихин, А.Бухаров, А.Гущин, В.Демчог, А.Заворотнюк, А.Хилькевич" data-videoUrl='none' data-poster="/videos/otdel.webp">Отдел (2016)</h3>
-                            </div>
-                            <div class="swiper-slide swiper-top">
-                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Бобры" data-genre="Жанр: Мелодрама" data-roles="В главных ролях: К. Соловьев, Е. Вуличенко, Ф. Лавров, В. Ветров, Д. Беспалый и др." data-videoUrl="/videos/bobri.mp4">Бобры (2018)</h3>
-                            </div>
-                            <div class="swiper-slide swiper-top">
-                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Пляж. Жаркий сезон" data-genre="Жанр: Детектив с элементами комедии" data-roles="В главных ролях: Г. Дронов, П. Делонг, О. Березкина и др." data-videoUrl="/videos/plyazh_jarkij.mp4">Пляж. Жаркий сезон (2018)</h3>
-                            </div>
-                            <div class="swiper-slide swiper-top">
-                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Золото Лагина" data-genre="Жанр: Детектив, драма, триллер" data-roles="В главных ролях: А. Балуев , М. Порошина , А. Шевченко , Т. Бадалбейли, Д. Куличков, В. Верёвочкин, И. Акрачков, А.Кирсанов и др." data-videoUrl="/videos/zoloto_lagina.mp4">Золото Лагина (2019)</h3>
-                            </div>
-                            <div class="swiper-slide swiper-top">
-                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Хозяин" data-genre="Жанр: Драма, триллер" data-roles="В главных ролях:  Д. Никифоров, Е. Дрозд, И. Таранник, Н. Козак, С. Шарифуллин, П. Баранчеев, Д. Лавров, М. Овакимян, А. Богданов, Д. Юргенс и др." data-videoUrl="/videos/hozyain.mp4">Хозяин (2020)</h3>
-                            </div>
-                            <div class="swiper-slide swiper-top">
-                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Чужая стая" data-genre="Жанр: Драма, боевик" data-roles="В главных ролях:  Д. Ульянов, М. Абуладзе, Т. Казючиц, Е. Олькина, А. Шевченков, Ю. Скулябин, Е. Невар, И. Ходимчук, Д. Блохин, С. Векслер и др." data-videoUrl="/videos/chuzhaya_staya.mp4">Чужая стая (2020)</h3>
-                            </div>
-                            <div class="swiper-slide swiper-top">
-                                <h3 onclick="videoUrl(this)" id="dataset" data-header="Криминальный доктор" data-genre="Жанр: Боевик, драма, триллер" data-roles="В главных ролях: К. Сафонов, А. Снаткина, И. Жижикин, М. Горевой, Т. Колганова, А. Каштанова и др." data-videoUrl="/videos/kriminalnij_doctor.mp4">Криминальный доктор (2021)</h3>
-                            </div>
-                            <div class="swiper-slide swiper-top">
-                                <h3 onclick="videoUrl(this)" id="dataset" data-header="БиМ" data-genre="Жанр: Преступление, комедия, детектив" data-roles="В главных ролях: Д. Никифоров, А. Армер, А. Багиров, Н. Славецкая, А. Харыбин, М. Богдасаров и др." data-videoUrl="/videos/bim.mp4">БиМ (2021)</h3>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Человек, который знал все.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Человек, который знал все
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Драма
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях А.Кравченко, К.Кяро, А. Шаляпин
+                                </p>
                             </div>
                           </div>
-                          <div class="swiper-scrollbar"></div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Отдел.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Отдел
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Криминал, детектив
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: М. Болтнева, В. Тарасова, Д. Рожков, Д. Жариков, Е. Самарин, В. Фекленко, Ю. Самойленко и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Провокатор.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Провокатор
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Приключенческий детектив
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: В.Хаев, Е.Сангаджиев, И.Волков, А.Шевченко и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Золотой запас.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Золотой запас
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Остросюжетный боевик
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: М. Мамаев, Л. Мэй, И. Волков, И. Савочкин и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Я-Ангина!.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Я-Ангина!
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Детектив, лирическая комедия
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: К. Бабушкина, Л. Полякова, М. Васьков, А. Гущин и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Холодное блюдо.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Холодное блюдо
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Психологическая драма
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: И. Шакунов, Т. Черкасова, В. Веревочкин,  А. Майорова, А. Наумов, И. Андреевайте и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Мужские каникулы.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Мужские каникулы
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Роуд муви
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: А. Кравченко, К. Кяро, А. Шаляпин и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Пляж.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Пляж
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Детектив с элементами комедии
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: Г. Дронов, П. Делонг, О. Березкина, Д. Агишева и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Бык и Шпиндель.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Бык и Шпиндель
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Детектив, драма, криминал
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: И. Лифанов, В. Зайцев и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Отдел-1.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Отдел
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Детектив
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: А. Кравченко, К. Кяро, А. Шаляпин и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Пляж. Жаркий сезон.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Пляж. Жаркий сезон
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Детектив с элементами комедии
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: Г. Дронов, П. Делонг, О. Березкина и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Бобры.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Бобры
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Мелодрама
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: К. Соловьев, Е. Вуличенко, Ф. Лавров, В. Ветров, Д. Беспалый и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Золото Лагина.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Золото Лагина
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Детектив, драма, триллер
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: А. Балуев , М. Порошина , А. Шевченко , Т. Бадалбейли, Д. Куличков, В. Верёвочкин, И. Акрачков, А.Кирсанов и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Чужая стая.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Чужая стая
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Драма, боевик
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: Д. Ульянов, М. Абуладзе, Т. Казючиц, Е. Олькина, А. Шевченков, Ю. Скулябин, Е. Невар, И. Ходимчук, Д. Блохин, С. Векслер и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Хозяин.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Хозяин
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Драма, триллер
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: Д. Никифоров, Е. Дрозд, И. Таранник, Н. Козак, С. Шарифуллин, П. Баранчеев, Д. Лавров, М. Овакимян, А. Богданов, Д. Юргенс и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Вторая попытка.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Вторая попытка
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Мелодрама
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: О. Ломоносов, Д. Никифоров, А. Феоктисов, М. Вознесенская, А. Ивченко и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Несчастный случай.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Несчастный случай
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Детектив, мелодрама
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: О. Павловец, П. Баранчеев, Р. Полянский, С. Шарифуллин, Е. Волзонская, Т. Чердынсцева и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Криминальный доктор.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Криминальный доктор
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр:  Боевик, драма, триллер
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: К. Сафонов, А. Снаткина, И. Жижикин, М. Горевой, Т. Колганова, А. Каштанова и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/БиМ.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    БиМ
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Преступление, комедия, детектив
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: Д. Никифоров, А. Армер, А. Багиров, Н. Славецкая, А. Харыбин, М. Богдасаров и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Дама с собакой.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Дама с собачкой
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Детектив, драма, триллер
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: Е. Яковлева, А. Балуев, С. Перегудов, Г. Смирнов, Сири, И. Таранник, А. Дзюба, Л. Германова, К. Жиров, Е. Бугулова и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Лучшая подруга.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Лучшая подруга
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Детектив, драма, триллер
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: Е. Яковлева, А. Балуев, С. Перегудов, Г. Смирнов, Сири, И. Таранник, А. Дзюба, Л. Германова, К. Жиров, Е. Бугулова и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Ни к селу, ни к городу 2.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Ни к селу, ни к городу 2
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Детектив, драма, триллер
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: Е. Яковлева, А. Балуев, С. Перегудов, Г. Смирнов, Сири, И. Таранник, А. Дзюба, Л. Германова, К. Жиров, Е. Бугулова и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Призрачное счастье.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Призрачное счастье
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Мелодрама
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: Г. Данилова, Е. Сидихин, А. Дворянская, А. Инамов, И. Коробко, А. Корякови др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Пустой дом.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Пустой дом
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Мелодрама
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: Е. Яковлева, А. Балуев, С. Перегудов, Г. Смирнов, Сири, И. Таранник, А. Дзюба, Л. Германова, К. Жиров, Е. Бугулова и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Хрустальное счастье.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Хрустальное счастье
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Мелодрама
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: М. Куликова, Ю. Батурин, Д. Розин, П. Доманова и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Я всё начну сначала.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Я всё начну сначала
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Мелодрама
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: Г. Тарханова, С. Горобченко, Т. Сытова, К. Гребенщиков др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Паром для двоих.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Паром для двоих
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Мелодрама
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях:  Ю. Подозёрова, И. Носков, Р. Рязанова, Н. Табунщик  и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/БиМ-продолжение.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    БиМ-продолжение
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Преступление, комедия, детектив
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: Д. Никифоров, А. Армер, А. Багиров, Н. Славецкая, А. Харыбин, М. Богдасаров и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Борщи.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Борщи
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Драма, комедия, детектив, преступление
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: А. Балуев , М. Порошина , А. Шевченко , Т. Бадалбейли, Д. Куличков, В. Верёвочкин, И. Акрачков, А.Кирсанов и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Весна перемен.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Весна перемен
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр:  Мелодрама
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: А. Коломина, Г. Голубева, В. Кудрявцев, С. Кудряшов, М. Щеголев, В. Паршенков, Н. Аскарова, Д. Доронин, В. Воробьев и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Горько-соленое море любви.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Горько-соленое море любви
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр:  Мелодрама
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: Т. Чердынцева, К. Кочак, О. Чеми, И. Жидков, К. Лукьянчикова, Е. Писарев, Ю. Станкевич и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Доченьки.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Доченьки
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр:  Мелодрама
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: Д. Щербакова, И. Носков, С. Галахов, А. Кулямин, В. Адельфина, И. Сидорова и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Между нами глубокое море.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Между нами глубокое море
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр:  Мелодрама
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: С. Смирнова-Марцинкевич, А. Комашко, А. Постникова, Г. Гезер, Ю. Кинеберг, Г. Нанава, Л. Германова и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Мелодия для двоих.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Мелодия для двоих
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр:  Мелодрама
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: А. Тараторкина, Д. Миллер, А. Фатеев, И. Чериченко, М. Волкова, Л. Зайцева, Ю. Такшина и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Не будь моей женой.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Не будь моей женой
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр:  Мелодрама
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: О. Михайлова, Д. Ульянов, М. Ханжов, Ю. Кинеберг, В. Щербина, Е. Баринов и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Светлана.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Светлана
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр:  Мелодрама
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: С. Смирнова-Марцинкевич, А. Комашко, А. Постникова, Г. Гезер, Ю. Кинеберг, Г. Нанава, Л. Германова и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Срок давности.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Срок давности
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр:  Мелодрама
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: Е. Редникова, А. Акатова, С. Пиоро, Д. Горшкова, Е. Зарубин, А. Карышева и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Зеркало лжи.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Зеркало лжи
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр:  Детектив
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях:  М. Куликова, О. Павловец, Д. Миллер, А. Сопова, А. Голотвина, П. Кузьмин, Д. Енакаева, И. Жидков и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Емеля.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Емеля
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Боевик, комедия, криминал
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях:  М. Куликова, О. Павловец, Д. Миллер, А. Сопова, А. Голотвина, П. Кузьмин, Д. Енакаева, И. Жидков и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Дама с собачкой-2.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Дама с собачкой-2
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Детектив, драма, триллер
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях:  Е. Яковлева, С. Перегудов, А. Балуев, И. Таранник, А. Дзюба, О. Михайлова, О. Хохлова, С. Голотвин
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Бим. 3.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Бим. 3
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Детектив, комедия, мелодрама
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: Д. Никифоров, А. Багиров, А. Харыбин, Н. Славецкая, М. Важов, М. Бриш, Н. Печерская, И. Хотеенкова, А. Паршина, А. Лунин, и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Острое блюдо.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Острое блюдо
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Мелодрама
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях:  Е. Данилова, И. Акинтьев, Ю. Батурин, О. Чеми, К. Казакевич, С. Багир-заде, А. Бачалова, Е. Баринов и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Рецепт на любовь.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Рецепт на любовь
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Мелодрама
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях: Д. Затеева, Е. Сазыкин, Д. Юргенс, Г. Данилова, В. Копейкин, З. Буряк, О. Алмазов и др.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="img/top-slider/Заговор на одиночество.webp" />
+                            <div id="video-info" class="video-slide-info">
+                                <h3 id="video-header">
+                                    Заговор на одиночество
+                                </h3>
+                                <p id="video-genre">
+                                    Жанр: Мелодрама
+                                </p>
+                                <p id="video-roles">
+                                    В главных ролях:   С. Смирнова-Марцинкевич, Г. Козулина, Вахтанг Беридзе, Н. Абдулов, П. Кислов и др.
+                                </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-button-next"></div>  
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <div humbsSlider="" class="swiper mySwiper swiper-container swiper-top-container" style="overflow: hidden;">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Человек, который знал все (2009)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Отдел (2010)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Провокатор (2011)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Золотой запас (2012)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Я-Ангина (2013)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Холодное блюдо (2014)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Мужские каникулы (2014)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Пляж (2014)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Бык и шпиндель (2015)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Отдел (2016)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Пляж. Жаркий сезон (2018)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Бобры (2018)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Золото Лагина (2019)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Чужая стая (2020)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Хозяин (2020)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Вторая попытка (2020)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Несчастный случай (2020)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Криминальный доктор (2021)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    БиМ (2021)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Дама с собачкой (2021)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Лучшая подруга (2021)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Ни к селу, ни к городу (2021)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Призрачное счастье (2021)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Пустой дом (2021)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Хрустальное счастье (2021)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Я все начну сначала (2021)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Паром для двоих (2021)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    БиМ. Продолжение (2022)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Борщи (2022)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Весна перемен (2022)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Горько-соленое море любви (2022)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Доченьки (2022)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Между нами глубокое море (2022)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Мелодия для двоих (2022)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Не будь моей женой (2022)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Светлана (2022)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Срок давности (2022)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Зеркало лжи (2023)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Емеля (2023)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Дама с собачкой 2 (2023)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    БиМ. 3 (2023)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Острое блюдо (2023)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Рецепт на любовь (2023)
+                                </h3>
+                            </div>
+                            <div class="swiper-slide swiper-top">
+                                <h3 id="dataset">
+                                    Заговор на одиночество (2023)
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar"></div>
                     </div>
                 </div>
                 <div class="action">
@@ -1197,6 +1991,8 @@
             // window.scrollBy(0, 900);
             window.scrollTo({ top: 917, behavior: 'smooth' })
         });
+
+       
     </script>
   </body>
 </html>

@@ -163,8 +163,12 @@
     }
     
     .video-slide-info {
-        height: 139px;
+        margin-top: 10px;
+        height: 100px;
         text-align: left;
+    }
+    .swiper-top-container .swiper-slide-thumb-active h3 {
+        color: rgb(221, 15, 15) !important;
     }
     #video-header {
         color: rgb(231, 227, 216);
@@ -797,14 +801,16 @@
     
     .video-slide-info {
         text-align: left;
+        width: 400px;
         opacity: 0;
         position: relative;
-        top: -166px;
-        left: 1170px;
-        padding: 10px;
+        top: -145px;
+        left: 926px;
+        padding: 15px;
         border-radius: 15px;
         background: rgb(32, 32, 32);
         transition: 0.5s;
+        z-index: 1;
     }
     #video-header {
         color: rgb(231, 227, 216);
@@ -844,11 +850,14 @@
         object-fit: fill;
         border-radius: 10px;
     }
-    .video-slide:hover .video-slide-info{
+    .top-slider-container:hover .video-slide-info{
         opacity: 1;
-        transform: translateX(-400px);
+        /* transform: translateX(-400px); */
     }
-    
+    .swiper.mySwiper2 {
+        border-radius: 10px;
+        height: 695px;
+    }
     #next-video-slide {
         display: block;
         margin: 20px auto;
@@ -945,14 +954,6 @@
     .swiper-container {
         height: 60px;
     }
-    .swiper-top {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .spiwer-wrapper {
-        overflow: hidden;
-    }
     #dataset{
         color: rgb(255, 255, 255);
         font-family: Gilroy !important;
@@ -962,6 +963,17 @@
         letter-spacing: 0%;
         text-align: center;
         cursor: pointer;
+    }
+    .swiper-top-container .swiper-slide-thumb-active h3 {
+        color: rgb(221, 15, 15) !important;
+    }
+    .swiper-top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .spiwer-wrapper {
+        overflow: hidden;
     }
     .scrollbar_custom {
         position: relative !important;
